@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeInfo</title>
+    <script src="./laboratorio/setup.js"></script>
+    <script src="./laboratorio/funcionespokemon.js"></script>
+    <script src="./laboratorio/pokemonlist.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body onload="getNombres()" class="row">
+    <div id="loading-div">
+        
+    </div>
+
+    <div id="pokedex-list" class="column">
+
+       
+
+        <div id="pokedex-list-render-container">
+        </div>
+    </div>
+    
+    <div id="current-pokemon-responsive-background" class="hide"></div>
+    <div id="current-pokemon-responsive-close" class="hide" onclick="closePokemonInfo()"></div>
+
+    <div id="current-pokemon-container" class="container column center">
+    
+
+        <img id="poke-imagen" src="src/no-pokemon-selected-image.png">
+
+        <div id="poke-info" class="hide">
+
+            <informacion id="current-pokemon-id" class="fuente1 bold">Ola</informacion>
+            
+            <h2 id="current-pokemon-name">Click en el pokemon para ver su info</h2>
+
+            <div id="current-pokemon-types" class="row center"></div>
+
+            <h4>Descripcion</h4>
+            <informacion id="current-pokemon-description"></informacion>
+
+            <div class="row center">
+                <div class="width-100 column center margin-5">
+                    <h4>Altura</h4>
+                    <div  id="current-pokemon-height" class="pokemon-info-variable-container"></div>
+                </div>
+                <div class="width-100 column center margin-5">
+                    <h4>Peso</h4>
+                    <div id="current-pokemon-weight" class="pokemon-info-variable-container"></div>
+                </div>
+            </div>
+
+           
+
+        <div id="current-pokemon-empty">
+        </div>
+    </div>
+
+
+</body>
+</html>
